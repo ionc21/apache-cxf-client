@@ -21,5 +21,14 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
+	<bean id="orderServiceSoapHeaderOutInterceptor" class="com.pgs.interceptors.OrderServiceSoapHeaderOutInterceptor" />
+	
+	<jaxws:client id="orders" address="http://localhost:8080/apache-cxf-jaxws-server/services/orders" serviceClass="com.pgs.service.orders.Orders">
+		<jaxws:outInterceptors>
+			<ref bean="orderServiceSoapHeaderOutInterceptor" />
+		</jaxws:outInterceptors>
+	</jaxws:client>
+	
+	
 
 </beans>
