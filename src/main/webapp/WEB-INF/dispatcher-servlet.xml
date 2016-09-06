@@ -27,8 +27,6 @@
 		<jaxws:outInterceptors>
 			<ref bean="orderServiceSoapHeaderOutInterceptor" />
 		</jaxws:outInterceptors>
-	</jaxws:client>
-	
-	
+	</jaxws:client>	
 
 </beans>
